@@ -6,6 +6,8 @@ from bs4 import BeautifulSoup
 names = {
     "Mikaela": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=164835&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Lindsey": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=30368&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
+    "Annemarie": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=41748&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
+    "Verni": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=al&competitorid=54768&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Renate": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=20775&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Anja": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=al&competitorid=45786&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Mariles": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=al&competitorid=54421&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
@@ -15,8 +17,12 @@ names = {
     "Tina": "https://www.fis-ski.com/DB/general/athlete-biography.html?sector=AL&competitorid=38837&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Petra": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=168809&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
 
+
+    "Ingemar": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=al&competitorid=58663&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Marcel": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=106332&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Hermann": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=al&competitorid=36996&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
+    "Marc": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=20467&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
+    "Pirmin": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=68532&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Alberto": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=al&competitorid=61842&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Benjamin": "https://www.fis-ski.com/DB/general/athlete-biography.html?sector=AL&competitorid=49658&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
     "Aksel": "https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=59877&type=result&categorycode=&sort=&place=&disciplinecode=&position=&limit=5000",
@@ -147,30 +153,63 @@ def podiums(name):
 # plt.legend()
 # plt.show()
 
-plt.plot(wins("Mikaela")["index"], wins("Mikaela")["level_0"], label='Shiffrin')
-plt.plot(wins("Lindsey")["index"], wins("Lindsey")["level_0"], label='Vonn')
-plt.plot(wins("Renate")["index"], wins("Renate")["level_0"], label='Götschl')
-plt.plot(wins("Anja")["index"], wins("Anja")["level_0"], label='Pärson')
-plt.plot(wins("Mariles")["index"], wins("Mariles")["level_0"], label='Schild')
-plt.plot(wins("Lara")["index"], wins("Lara")["level_0"], label='Gut-Behrami')
-plt.plot(wins("Janica")["index"], wins("Janica")["level_0"], label='Kostelic')
-plt.plot(wins("Maria")["index"], wins("Maria")["level_0"], label='Höfl-Riesch')
-plt.plot(wins("Petra")["index"], wins("Petra")["level_0"], label='Vlhova')
+# plt.plot(wins("Mikaela")["index"], wins("Mikaela")["level_0"], label='Shiffrin')
+# plt.plot(wins("Lindsey")["index"], wins("Lindsey")["level_0"], label='Vonn')
+# plt.plot(wins("Renate")["index"], wins("Renate")["level_0"], label='Götschl')
+# plt.plot(wins("Anja")["index"], wins("Anja")["level_0"], label='Pärson')
+# plt.plot(wins("Mariles")["index"], wins("Mariles")["level_0"], label='Schild')
+# plt.plot(wins("Lara")["index"], wins("Lara")["level_0"], label='Gut-Behrami')
+# plt.plot(wins("Janica")["index"], wins("Janica")["level_0"], label='Kostelic')
+# plt.plot(wins("Maria")["index"], wins("Maria")["level_0"], label='Höfl-Riesch')
+# plt.plot(wins("Petra")["index"], wins("Petra")["level_0"], label='Vlhova')
+# plt.xlabel("Number of starts")
+# plt.ylabel("Number of wins")
+# plt.grid()
+# plt.legend()
+# plt.show()
+#
+#
+# plt.plot(wins("Marcel")["index"], wins("Marcel")["level_0"], label='Hirscher')
+# plt.plot(wins("Hermann")["index"], wins("Hermann")["level_0"], label='Maier')
+# plt.plot(wins("Alberto")["index"], wins("Alberto")["level_0"], label='Tomba')
+# plt.plot(wins("Benjamin")["index"], wins("Benjamin")["level_0"], label='Raich')
+# plt.plot(wins("Aksel")["index"], wins("Aksel")["level_0"], label='Svindal')
+# plt.plot(wins("Alexis")["index"], wins("Alexis")["level_0"], label='Pinturault')
+# plt.plot(wins("Bode")["index"], wins("Bode")["level_0"], label='Miller')
+# plt.plot(wins("Henrik")["index"], wins("Henrik")["level_0"], label='Kristoffersen')
+# plt.plot(wins("Marco")["index"], wins("Marco")["level_0"], label='Odermatt')
+# plt.xlabel("Number of starts")
+# plt.ylabel("Number of wins")
+# plt.grid()
+# plt.legend()
+# plt.show()
+
+
+plt.plot(podiums("Mikaela")["index"], podiums("Mikaela")["level_0"], label='Shiffrin')
+plt.plot(podiums("Lindsey")["index"], podiums("Lindsey")["level_0"], label='Vonn')
+plt.plot(podiums("Annemarie")["index"], podiums("Annemarie")["level_0"], label='Moser-Pröll')
+plt.plot(podiums("Verni")["index"], podiums("Verni")["level_0"], label='Schneider')
+plt.plot(podiums("Renate")["index"], podiums("Renate")["level_0"], label='Götschl')
+plt.plot(podiums("Ingemar")["index"], podiums("Ingemar")["level_0"], label='Stenmark')
+plt.plot(podiums("Marcel")["index"], podiums("Marcel")["level_0"], label='Hirscher')
+plt.plot(podiums("Hermann")["index"], podiums("Hermann")["level_0"], label='Maier')
+plt.plot(podiums("Alberto")["index"], podiums("Alberto")["level_0"], label='Tomba')
+plt.plot(podiums("Marco")["index"], podiums("Marco")["level_0"], label='Odermatt')
 plt.xlabel("Number of starts")
-plt.ylabel("Number of wins")
+plt.ylabel("Number of podiums")
 plt.grid()
 plt.legend()
 plt.show()
 
-
+plt.plot(wins("Mikaela")["index"], wins("Mikaela")["level_0"], label='Shiffrin')
+plt.plot(wins("Lindsey")["index"], wins("Lindsey")["level_0"], label='Vonn')
+plt.plot(wins("Annemarie")["index"], wins("Annemarie")["level_0"], label='Moser-Pröll')
+plt.plot(wins("Verni")["index"], wins("Verni")["level_0"], label='Schneider')
+plt.plot(wins("Renate")["index"], wins("Renate")["level_0"], label='Götschl')
+plt.plot(wins("Ingemar")["index"], wins("Ingemar")["level_0"], label='Stenmark')
 plt.plot(wins("Marcel")["index"], wins("Marcel")["level_0"], label='Hirscher')
 plt.plot(wins("Hermann")["index"], wins("Hermann")["level_0"], label='Maier')
 plt.plot(wins("Alberto")["index"], wins("Alberto")["level_0"], label='Tomba')
-plt.plot(wins("Benjamin")["index"], wins("Benjamin")["level_0"], label='Raich')
-plt.plot(wins("Aksel")["index"], wins("Aksel")["level_0"], label='Svindal')
-plt.plot(wins("Alexis")["index"], wins("Alexis")["level_0"], label='Pinturault')
-plt.plot(wins("Bode")["index"], wins("Bode")["level_0"], label='Miller')
-plt.plot(wins("Henrik")["index"], wins("Henrik")["level_0"], label='Kristoffersen')
 plt.plot(wins("Marco")["index"], wins("Marco")["level_0"], label='Odermatt')
 plt.xlabel("Number of starts")
 plt.ylabel("Number of wins")
